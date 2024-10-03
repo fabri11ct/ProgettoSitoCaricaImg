@@ -1,0 +1,421 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/*------------ HEADER -----------*/
+
+.header{
+    background-color: #ebebeb;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10000;
+    width: 100%;
+}
+
+.header__icons{
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header__content{
+    top: 0;
+    left: 0;
+    background-color: #ebebeb;
+    z-index: 10000;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.header__content a{
+    flex-grow: 2;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__menu li{ 
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.header__menu li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #070F2B;
+    opacity: 0.8;
+    text-decoration: none;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    transition: transform 0.6s ease;
+}
+
+.header__menu li a:hover{
+    transform: scale(1.3);
+    color: #ffffff;
+    text-shadow: -1px -1px 4px #070F2B,
+                 1px -1px 4px #070F2B,
+                 -1px 1px 4px #070F2B,
+                 1px 1px 4px #070F2B;
+}
+
+.header__menu li a:not(:hover){
+    transform: scale(1)
+    
+}
+
+/*------------ LOGO -----------*/
+
+.logo{
+    max-width: 100px;
+    max-height: 100px;
+    height: 100%;
+    z-index: 10000;
+    flex-grow: 2;
+}
+  
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: rgb(0,212,255);
+    background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(4,114,149,1) 20%, rgba(6,62,93,1) 45%, rgba(7,15,43,1) 75%);
+    width: 100%; /* Adjust to your preferred width */
+    height: 100%; 
+    padding: 50px 0 50px 0;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px ;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid #070F2B;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #070F2B;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: rgb(56, 90, 194);
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #070F2B;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1.3s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0 0 0;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: #070F2B;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline #070F2B;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 90%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    
+    margin: 10px 0 0 0;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  .bottone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0 10px 0;
+  }
+
+  .submit{
+    background-color: #070F2B;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+
+  }
+
+  .footer__content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  
+    background-color: #070f2b;
+    width: 100%;
+    height: 20vh;
+    z-index: 20000;
+  }
+  
+  .powered {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+  
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  
+    flex-grow: 1;
+    width: 100%;
+  
+    padding: 0px 0px 10px 10px;
+  }
+  
+  .terms {
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .terms a {
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    padding: 1px;
+  }
+  
+  .gene {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+ /*------------ SMARTPHONE VERSION -----------*/
+
+@media screen and (max-width: 1024px){
+    .header__menu{
+        display: inline-block;
+        position: absolute;
+        margin-top: 80px;
+        background-color: #070f2bfd;
+        width: 100%;
+        height: 100vh;
+        height: 0vh;
+        overflow: hidden;
+        transition: all 1.4s cubic-bezier(.215, .61, .355, 1);
+        
+    }
+    .header__menu li a{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        transition: all 1.4s cubic-bezier(.215, .61, .355, 1);
+    }
+
+    .header__menu.menu-open li a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #fff;
+    }
+
+    .header__menu li{
+        width: 100vw;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .header__content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1920px;
+        width: 100%;
+        height: 80px;
+        margin: 0 auto;
+        font-size: 20px;  
+    }
+
+    .menu-open .header__menu{
+        height: 100vh;
+    }
+
+
+/*------------ HAMBURGER -----------*/
+
+    .icon-hamburger{ 
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        z-index: 10000;
+    }
+
+    .icon-hamburger span{
+        height: 3px;
+        width: 30px;
+        background: #070F2B;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .header__icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+    }
+
+    .text-video b{
+        font-size: 10px;
+      }
+    
+    /*------------ FOOTER -----------*/
+
+  .footer__content {
+    height: 17vh;
+  }
+
+  .powered {
+    font-size: 10px;
+  }
+
+  .terms a {
+    font-size: 10px;
+  }
+
+  .gene {
+    font-size: 10px;
+  }
+
+} 
